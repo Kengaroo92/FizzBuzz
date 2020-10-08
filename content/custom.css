@@ -1,0 +1,11 @@
+﻿.custnav, .custnav .nav-link, .custnav .navbar-brand {
+    background-color: #4E5D6C;
+    font-family: Raleway;
+    color: #C0C0C0;
+}
+
+.custbtn, .custbtn .btn-secondary {
+    background-color: #4E5D6C;
+    font-family: Raleway;
+    color: #C0C0C0;
+}
