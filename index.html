@@ -14,7 +14,8 @@
     <link rel="shortcut icon" href="/img/littleman_favicon.ico" />
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <!-- My Custom CSS -->
     <link href="../content/custom.css" rel="stylesheet" />
@@ -24,7 +25,7 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="custnav navbar navbar-expand-lg static-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
             <a class="navbar-brand" href="/Index.html">FizzBuzz Challenge</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,24 +33,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/Index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Challenge</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.github.com/Kengaroo92">GitHub</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.kenanbjelosevic.com">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">My Blog</a>
-                    </li>
+                    <li class="nav-item active"><a class="nav-link" href="/Index.html">Home</a></li>
+                    <!--<li class="nav-item"><a class="nav-link" href="#">Challenge</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Code</a></li>-->
+                    <li class="nav-item"><a class="nav-link" href="https://www.github.com/Kengaroo92">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.kenanbjelosevic.com">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My Blog</a></li>
                 </ul>
             </div>
         </div>
@@ -62,12 +51,14 @@
                 <h1 class="mt-5">FizzBuzz Challenge</h1>
                 <p class="lead"></p>
                 <ul class="list-unstyled">
-                    <li>FizzBuzz is a very simple programming task. Originally it prints the numbers 1 to 100. For multiples of three it prints the word "Fizz" instead of the number 
-                    and for multiples of five it prints the word "Buzz". For any number which is both a multiple of three and five, it will print the word "FizzBuzz". I changed it up a bit by
-                    allowing you to input the number you want the program to find multiples of and the range of numbers it will use to search for the multiples. 
+                    <li>
+                        FizzBuzz is a very simple programming task. Originally it prints the numbers 1 to 100. For multiples of three it prints the word "Fizz" instead of the number
+                        and for multiples of five it prints the word "Buzz". For any number which is both a multiple of three and five, it will print the word "FizzBuzz". I changed it up a bit by
+                        allowing you to input the number you want the program to find multiples of and the range of numbers it will use to search for the multiples.
                     </li>
-                    <li>You will see four total FizzBuzz programs below. Each is unique in it's own way. I wrote each program in a different way, mostly for practice but it does show that I am
-                    versatile and can adapt to any challenge. I have also included a snippet of each JavaScript code used for each program. Please enjoy!
+                    <li>
+                        You will see four total FizzBuzz programs below. Each is unique in it's own way. I wrote each program in a different way, mostly for practice but it does show that I am
+                        versatile and can adapt to any challenge. I have also included a snippet of each JavaScript code used for each program. Please enjoy!
                     </li>
                 </ul>
             </div>
@@ -107,8 +98,10 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5">Find FizzBuzz B</h1>
-                <p>Each FizzBuzz challenge is a little more complicated. FizzBuzz B uses the switch statement which checks if the given statement is true, if it is it will execute
-                the following code, if false it will go to the next case and loop through it.</p>
+                <p>
+                    Each FizzBuzz challenge is a little more complicated. FizzBuzz B uses the switch statement which checks if the given statement is true, if it is it will execute
+                    the following code, if false it will go to the next case and loop through it.
+                </p>
                 <p>Enter the requested numbers and let the program Buzzz!</p>
             </div>
         </div>
@@ -138,9 +131,11 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5">Find FizzBuzz C</h1>
-                <p>FizzBuzz C was the most interesting one to figure out. It is considered a one line code. It is accomplished by using a ternary operator. It's the only JavaScript operator that
-                takes three operands: a condition followed by a question mark (?), then an expression to execute if the condition is true, which is followed by a colon (:), and finally the
-                expression to execute if the condition is false.</p>
+                <p>
+                    FizzBuzz C was the most interesting one to figure out. It is considered a one line code. It is accomplished by using a ternary operator. It's the only JavaScript operator that
+                    takes three operands: a condition followed by a question mark (?), then an expression to execute if the condition is true, which is followed by a colon (:), and finally the
+                    expression to execute if the condition is false.
+                </p>
                 <p>Enter the requested numbers and let the program Buzzz!</p>
             </div>
         </div>
@@ -170,8 +165,9 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5">Find FizzBuzz D</h1>
-                <p>FizzBuzz D uses an array to accomplish the task at hand. An array is an object that is used to store multiple values in a single variable. In this case, that variable is i,
-                which is the users range input, so it can be as simple as 1 to 100 or more complicated like 1 million for example.
+                <p>
+                    FizzBuzz D uses an array to accomplish the task at hand. An array is an object that is used to store multiple values in a single variable. In this case, that variable is i,
+                    which is the users range input, so it can be as simple as 1 to 100 or more complicated like 1 million for example.
                 </p>
                 <p>Enter the requested numbers and let the program Buzzz!</p>
 
