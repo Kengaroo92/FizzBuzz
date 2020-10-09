@@ -1,7 +1,32 @@
 ﻿.body {
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 43%, #E0C3FC 100%);
+    background: #606c88; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3f4c6b, #606c88); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.btn-grad {
+    background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%)
+}
+
+.btn-grad {
+    margin: 10px;
+    padding: 10px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+}
+         
 
 .custnav, .custnav .nav-link, .custnav .navbar-brand {
     background-color: #4E5D6C;
@@ -20,16 +45,16 @@
     background-color: #eee;
     color: #444;
     cursor: pointer;
-    padding: 18px;
+    padding: 15px;
     width: 100%;
     border: none;
-    text-align: left;
+    text-align: right;
     outline: none;
     font-size: 15px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
+.active2, .collapsible:hover {
     background-color: #ccc;
 }
 
@@ -49,6 +74,15 @@
     margin-left: 5px;
 }
 
-.active:after {
+.active2:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
+
+.verticalcent {
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+

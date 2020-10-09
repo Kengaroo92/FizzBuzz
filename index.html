@@ -14,178 +14,418 @@
     <link rel="shortcut icon" href="/img/littleman_favicon.ico" />
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <!-- My Custom CSS -->
-    <link href="../content/custom.css" rel="stylesheet" />
+    <link href="content/custom.css" rel="stylesheet" />
     <link href="content/prism.css" rel="stylesheet" />
 
 </head>
 
-<body>
+<body class="body">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <nav class="navbar navbar-expand-lg navbar-dark indigo">
         <div class="container">
-            <a class="navbar-brand" href="/Index.html">FizzBuzz Challenge</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="//www.kenanbjelosevic.com">Kenan Bjelosevic</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
                     <!--<li class="nav-item"><a class="nav-link" href="#">Challenge</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Code</a></li>-->
-                    <li class="nav-item"><a class="nav-link" href="https://www.github.com/Kengaroo92">GitHub</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.kenanbjelosevic.com">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="//www.github.com/Kengaroo92" target="_blank">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="//www.kenanbjelosevic.com" target="_blank">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">My Blog</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <br />
+    <br />
 
     <!-- Page Content -->
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 class="mt-5 text-center">FizzBuzz Challenge</h1>
+                <h1 class="mt-5 text-center verticalcent" style="color: white">FizzBuzz Challenge</h1>
+            </div>
+            <div class="col">
+                <p style="color: white;">The FizzBuzz Challenge has the coder write a program that prints the numbers from 1 to 100, but for multiples of 3 it will print "Fizz" and for multiples of 5 it will print "Buzz". For multiples of both 3 and 5, it will print "FizzBuzz".</p>
+                <span style="color: white;">Below you will see 4 different collapsible menus. Each has the same input and output but the code used to write each program is different. You will see a program for an "Else If Loop", "Switch Statement", "Ternary Operator" and "Arrays". Click the + or - signs to open/close the buttons and test the programs out.</span>
             </div>
         </div>
     </div>
     <br />
     <br />
 
+    <!-- Start of FizzBuzz Code -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- FizzBuzz A -->
+                <!-- Collapsible Button for FizzBuzz A -->
+                <button type="button" class="collapsible text-center btn-grad btn-grad:hover">Else If Loop</button>
+                <div class="content">
+                    <div class="row">
+                        <div class="col">
+                            <br />
+                            <div class="row">
+                                <br />
+                                <div class="col card">
+                                    <br />
+                                    <br />
+                                    <input type="number" id="userNumA1" placeholder="Multiple of:" />
+                                    <input type="number" id="userNumA2" placeholder="Multiple of:" />
+                                    <br />
+                                    <input type="number" id="lowA" placeholder="Start buzzing:" />
+                                    <input type="number" id="highA" placeholder="End buzzing:" />
+                                    <br />
+                                    <button class="btn custbtn btn-secondary" onclick="fizzBuzzA()">Buzzzz!</button>
+                                    <br />
+                                    <span id="returnValueA"></span>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!-- FizzBuzz B -->
+                <!-- Collapsible Button for FizzBuzz B -->
+                <button type="button" class="collapsible text-center btn-grad btn-grad:hover">Switch Statements</button>
+                <div class="content">
+                    <div class="row">
+                        <div class="col">
+                            <br />
+                            <div class="row">
+                                <br />
+                                <div class="col card">
+                                    <br />
+                                    <br />
+                                    <input type="number" id="userNumB1" placeholder="Multiple of:" />
+                                    <input type="number" id="userNumB2" placeholder="Multiple of:" />
+                                    <br />
+                                    <input type="number" id="lowB" placeholder="Start buzzing:" />
+                                    <input type="number" id="highB" placeholder="End buzzing:" />
+                                    <br />
+                                    <button class="btn custbtn btn-secondary" onclick="fizzBuzzB()">Buzzzz!</button>
+                                    <br />
+                                    <span id="returnValueB"></span>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!-- FizzBuzz C -->
+                <!-- Collapsible Button for FizzBuzz C -->
+                <button type="button" class="collapsible text-center btn-grad btn-grad:hover">Ternary Operators</button>
+                <div class="content">
+                    <div class="row">
+                        <div class="col">
+                            <br />
+                            <div class="row">
+                                <br />
+                                <div class="col card">
+                                    <br />
+                                    <br />
+                                    <input type="number" id="userNumC1" placeholder="Multiple of:" />
+                                    <input type="number" id="userNumC2" placeholder="Multiple of:" />
+                                    <br />
+                                    <input type="number" id="lowC" placeholder="Start buzzing:" />
+                                    <input type="number" id="highC" placeholder="End buzzing:" />
+                                    <br />
+                                    <button class="btn custbtn btn-secondary" onclick="fizzBuzzC()">Buzzzz!</button>
+                                    <br />
+                                    <span id="returnValueC"></span>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!-- FizzBuzz D -->
+                <!-- Collapsible Button for FizzBuzz D -->
+                <button type="button" class="collapsible text-center btn-grad btn-grad:hover">Arrays</button>
+                <div class="content">
+                    <div class="row">
+                        <div class="col">
+                            <br />
+                            <div class="row">
+                                <br />
+                                <div class="col card">
+                                    <br />
+                                    <br />
+                                    <input type="number" id="userNumD1" placeholder="Multiple of:" />
+                                    <input type="number" id="userNumD2" placeholder="Multiple of:" />
+                                    <br />
+                                    <input type="number" id="lowD" placeholder="Start buzzing:" />
+                                    <input type="number" id="highD" placeholder="End buzzing:" />
+                                    <br />
+                                    <button class="btn custbtn btn-secondary" onclick="fizzBuzzD()">Buzzzz!</button>
+                                    <br />
+                                    <span id="returnValueD"></span>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container text-center">
+        <span style="color: white;">Below this text you will see 4 more collapsible buttons. These will show you the code used to write the 4 programs above.</span>
+        <div class="row">
+            <div class="col">
+                <!-- FizzBuzz A -->
+                <!-- Collapsible Button for FizzBuzz A -->
+                <button class="collapsible text-center btn-grad btn-grad:hover">Else If Loop</button>
+                <div class="content">
+                    <!--<div class="row">-->
+                    <!--<div class="col">-->
+                    <br />
+                    <!--<div class="row">
+                    <br />
+                    <div class="col card">-->
+<pre class="language-javascript">
+<code>
+        //this is the start of function fizzBuzzA where we use if and else if statements.
+        function fizzBuzzA() {
 
-<div class="container">
-<div class="row">
-<div class="col">
-<!-- FizzBuzz A -->
-<!-- Collapsible Button for FizzBuzz A -->
-<button type="button" class="collapsible text-center">Else If Loop</button>
-<div class="content">
-<div class="row">
-<div class="col">
-<br />
-<div class="row">
-<br />
-<div class="col card">
-<br />
-<br />
-<input type="number" id="userNumA1" placeholder="Multiple of:" />
-<input type="number" id="userNumA2" placeholder="Multiple of:" />
-<br />
-<input type="number" id="lowA" placeholder="Start buzzing:" />
-<input type="number" id="highA" placeholder="End buzzing:" />
-<br />
-<button class="btn custbtn btn-secondary" onclick="fizzBuzzA()">Buzzzz!</button>
-<br />
-<span id="returnValueA"></span>
-<br />
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col">
-<!-- FizzBuzz B -->
-<!-- Collapsible Button for FizzBuzz B -->
-<button type="button" class="collapsible text-center">Switch Statements</button>
-<div class="content">
-<div class="row">
-<div class="col">
-<br />
-<div class="row">
-<br />
-<div class="col card">
-<br />
-<br />
-<input type="number" id="userNumB1" placeholder="Multiple of:" />
-<input type="number" id="userNumB2" placeholder="Multiple of:" />
-<br />
-<input type="number" id="lowB" placeholder="Start buzzing:" />
-<input type="number" id="highB" placeholder="End buzzing:" />
-<br />
-<button class="btn custbtn btn-secondary" onclick="fizzBuzzB()">Buzzzz!</button>
-<br />
-<span id="returnValueB"></span>
-<br />
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col">
-<!-- FizzBuzz C -->
-<!-- Collapsible Button for FizzBuzz C -->
-<button type="button" class="collapsible text-center">Ternary Operators</button>
-<div class="content">
-<div class="row">
-<div class="col">
-<br />
-<div class="row">
-<br />
-<div class="col card">
-<br />
-<br />
-<input type="number" id="userNumC1" placeholder="Multiple of:" />
-<input type="number" id="userNumC2" placeholder="Multiple of:" />
-<br />
-<input type="number" id="lowC" placeholder="Start buzzing:" />
-<input type="number" id="highC" placeholder="End buzzing:" />
-<br />
-<button class="btn custbtn btn-secondary" onclick="fizzBuzzC()">Buzzzz!</button>
-<br />
-<span id="returnValueC"></span>
-<br />
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col">
-<!-- FizzBuzz D -->
-<!-- Collapsible Button for FizzBuzz D -->
-<button type="button" class="collapsible text-center">Arrays</button>
-<div class="content">
-<div class="row">
-<div class="col">
-<br />
-<div class="row">
-<br />
-<div class="col card">
-<br />
-<br />
-<input type="number" id="userNumD1" placeholder="Multiple of:" />
-<input type="number" id="userNumD2" placeholder="Multiple of:" />
-<br />
-<input type="number" id="lowD" placeholder="Start buzzing:" />
-<input type="number" id="highD" placeholder="End buzzing:" />
-<br />
-<button class="btn custbtn btn-secondary" onclick="fizzBuzzD()">Buzzzz!</button>
-<br />
-<span id="returnValueD"></span>
-<br />
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+        //the variables inputNumA1 and inputNumA2 represent the two input boxes the user will input the multiples of.
+        let inputNumA1 = parseInt(document.getElementById("userNumA1").value);
+        let inputNumA2 = parseInt(document.getElementById("userNumA2").value);
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        //the variables rangeLowA and rangeHighA represent the two input boxes the user will input the lowest and highest numbers that will be considered for Fizz and/or Buzz.
+        let rangeLowA = parseInt(document.getElementById("lowA").value);
+        let rangeHighA = parseInt(document.getElementById("highA").value);
 
-        <!-- My Custom JavaScript File -->
-        <script src="../scripts/main.js"></script>
-        <script src="scripts/prism.js"></script>
+        //the variable returnValueA is going to be used to return the result of fizzBuzzA later on in the code. For now, we are just calling it as an empty string, it will be defined later on.
+        let returnValueA = "";
+
+        //if the input of variable i (which is = rangeLowA) is less then the input of rangeHighA, add 1 to i and check again until it is = rangeHighA.
+        for (let i = rangeLowA; i <= rangeHighA; i++) {
+
+        //if i is a multiple of userNumA1 and userNumA2, print FizzBuzz.
+        if (i % inputNumA1 == 0 && i % inputNumA2 == 0) { returnValueA += "FizzBuzz " }
+
+        //else if it isn't a multiple of userNumA1 and userNumA2, but is a multiple of userNumA1, print Fizz.
+        else if (i % inputNumA1 == 0) { returnValueA += "Fizz " }
+
+        //else if it isn't a multiple of userNumA1 and userNumA2, but is a multiple of userNumA2, print Buzz.
+        else if (i % inputNumA2 == 0) { returnValueA += "Buzz " }
+
+        //else print i
+        else { returnValueA += i + " " }
+        }
+
+        document.getElementById("returnValueA").innerHTML = returnValueA;
+
+        }
+</code>
+</pre>
+                    <!--</div>
+                </div>-->
+                    <!--</div>
+                </div>-->
+                </div>
+            </div>
+            <div class="col">
+                <!-- FizzBuzz B -->
+                <!-- Collapsible Button for FizzBuzz B -->
+                <button class="collapsible text-center btn-grad btn-grad:hover">Switch Statements</button>
+                <div class="content">
+                    <div class="row">
+                        <div class="col">
+                            <br />
+                            <div class="row">
+                                <br />
+                                <div class="col card">
+<pre class="language-javascript">
+<code>
+//this is the start of function fizzBuzzB where we use the switch statement.
+function fizzBuzzB(userNumB1, userNumB2) {
+
+    //the variables inputNumB1 and inputNumB2 represent the two input boxes the user will input the multiples of.
+    let inputNumB1 = parseInt(document.getElementById("userNumB1").value);
+    let inputNumB2 = parseInt(document.getElementById("userNumB2").value);
+
+    //the variables rangeLowB and rangeHighB represent the two input boxes the user will input the lowest and highest numbers that will be considered for Fizz and/or Buzz.
+    let rangeLowB = parseInt(document.getElementById("lowB").value);
+    let rangeHighB = parseInt(document.getElementById("highB").value);
+
+    //the variable returnValueB is going to be used to return the result of fizzBuzzB later on in the code. For now, we are just calling it as an empty string, it will be defined later on.
+    let returnValueB = "";
+
+    //the variables Fizz and Buzz are boolean variables. They hold the values of true or false. 
+    let Fizz = false;
+    let Buzz = false;
+
+    //we set the variable i = rangeLowB; if i is less then or equal to rangeHighB, the loop will stop, else it will add 1 number to i and check again.
+    for (let i = rangeLowB; i <= rangeHighB; i++) {
+        //here we are checking if the variable Fizz and Buzz is equal to their respective input (userNumB1/userNumB2). 
+        //keep in mind that Fizz and Buzz are = false. You can read it as false = i % (userNumB1/userNumB2) == 0; so if i % (userNumB1/userNumB2) !== 0, then you see false = false, which is true.
+        //the code below will determine our output.
+        Fizz = i % inputNumB1 == 0;
+        Buzz = i % inputNumB2 == 0;
+
+        //switch case, if any of the following statements (or cases) are true, then execute the code.
+        switch (true) {
+            case Fizz && Buzz: {
+                returnValueB += 'FizzBuzz ';
+                //the break statement will allow us to get out of the switch case and hit the next loop and loop it over.
+                break;
+            }
+            case Fizz: {
+                returnValueB += 'Fizz ';
+            }
+            case Buzz: {
+                returnValueB += 'Buzz ';
+                break;
+            }
+            default: {
+                returnValueB += i + ' ';
+                break;
+            }
+        }
+
+        document.getElementById("returnValueB").innerHTML = returnValueB;
+
+    }
+
+}
+</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!-- FizzBuzz C -->
+                <!-- Collapsible Button for FizzBuzz C -->
+                <button type="button" class="collapsible text-center btn-grad btn-grad:hover">Ternary Operators</button>
+                <div class="content">
+                    <div class="row">
+                        <div class="col">
+                            <br />
+                            <div class="row">
+                                <br />
+                                <div class="col card">
+<pre class="language-javascript">
+<code>
+        //this is the start of fizzBuzzD. This code is using an Array.
+        function fizzBuzzD() {
+
+        //the variables inputNumD1 and inputNumD2 represent the two input boxes the user will input the multiples of.
+        let inputNumD1 = parseInt(document.getElementById("userNumD1").value);
+        let inputNumD2 = parseInt(document.getElementById("userNumD2").value);
+
+        //the variables rangeLowD and rangeHighD represent the two input boxes the user will input the lowest and highest numbers that will be considered for Fizz and/or Buzz.
+        let rangeLowD = parseInt(document.getElementById("lowD").value);
+        let rangeHighD = parseInt(document.getElementById("highD").value);
+
+        let returnValueD = [];
+
+        for (let i = rangeLowD; i <= rangeHighD; i++) {
+        returnValueD[i] = ((i % inputNumD1 == 0 ? 'Fizz' : '') + (i % inputNumD2 == 0 ? 'Buzz' : '') || i);
+        }
+
+        //the .join('') is required in this situation or your code will show a bunch of commas which aren't pretty.
+        //I also used <br> to break the numbers apart and make it easier to look at.
+        document.getElementById("returnValueD").innerHTML = returnValueD.join('<br>');
+        }
+</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!-- FizzBuzz D -->
+                <!-- Collapsible Button for FizzBuzz D -->
+                <button type="button" class="collapsible text-center btn-grad btn-grad:hover">Arrays</button>
+                <div class="content">
+                    <div class="row">
+                        <div class="col">
+                            <br />
+                            <div class="row">
+                                <br />
+                                <div class="col card">
+<pre class="language-javascript">
+<code>
+        //this is the start of function fizzBuzzA where we use if and else if statements.
+        function fizzBuzzA() {
+
+        //the variables inputNumA1 and inputNumA2 represent the two input boxes the user will input the multiples of.
+        let inputNumA1 = parseInt(document.getElementById("userNumA1").value);
+        let inputNumA2 = parseInt(document.getElementById("userNumA2").value);
+
+        //the variables rangeLowA and rangeHighA represent the two input boxes the user will input the lowest and highest numbers that will be considered for Fizz and/or Buzz.
+        let rangeLowA = parseInt(document.getElementById("lowA").value);
+        let rangeHighA = parseInt(document.getElementById("highA").value);
+
+        //the variable returnValueA is going to be used to return the result of fizzBuzzA later on in the code. For now, we are just calling it as an empty string, it will be defined later on.
+        let returnValueA = "";
+
+        //if the input of variable i (which is = rangeLowA) is less then the input of rangeHighA, add 1 to i and check again until it is = rangeHighA.
+        for (let i = rangeLowA; i <= rangeHighA; i++) {
+
+        //if i is a multiple of userNumA1 and userNumA2, print FizzBuzz.
+        if (i % inputNumA1 == 0 && i % inputNumA2 == 0) { returnValueA += "FizzBuzz " }
+
+        //else if it isn't a multiple of userNumA1 and userNumA2, but is a multiple of userNumA1, print Fizz.
+        else if (i % inputNumA1 == 0) { returnValueA += "Fizz " }
+
+        //else if it isn't a multiple of userNumA1 and userNumA2, but is a multiple of userNumA2, print Buzz.
+        else if (i % inputNumA2 == 0) { returnValueA += "Buzz " }
+
+        //else print i
+        else { returnValueA += i + " " }
+        }
+
+        document.getElementById("returnValueA").innerHTML = returnValueA;
+
+        }
+
+</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- My Custom JavaScript File -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/prism.js"></script>
 
 </body>
 
