@@ -32,6 +32,9 @@ function fizzBuzzA() {
 
 }
 
+
+
+
 //this is the start of function fizzBuzzB where we use the switch statement.
 function fizzBuzzB(userNumB1, userNumB2) {
 
@@ -85,6 +88,9 @@ function fizzBuzzB(userNumB1, userNumB2) {
 
 }
 
+
+
+
 //this is the start of function fizzBuzzC. It is written in one line of code and still includes inputs for the multiples of and the range option.
 function fizzBuzzC() {
 
@@ -110,6 +116,9 @@ function fizzBuzzC() {
     document.getElementById("returnValueC").innerHTML = returnValueC;
 }
 
+
+
+
 //this is the start of fizzBuzzD. This code is using an Array.
 function fizzBuzzD() {
 
@@ -130,4 +139,19 @@ function fizzBuzzD() {
     //the .join('') is required in this situation or your code will show a bunch of commas which aren't pretty.
     //I also used <br> to break the numbers apart and make it easier to look at.
     document.getElementById("returnValueD").innerHTML = returnValueD.join('<br>');
+}
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
 }

@@ -19,6 +19,7 @@
 
     <!-- My Custom CSS -->
     <link href="../content/custom.css" rel="stylesheet" />
+    <link href="content/prism.css" rel="stylesheet" />
 
 </head>
 
@@ -33,7 +34,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="/Index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
                     <!--<li class="nav-item"><a class="nav-link" href="#">Challenge</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Code</a></li>-->
                     <li class="nav-item"><a class="nav-link" href="https://www.github.com/Kengaroo92">GitHub</a></li>
@@ -47,163 +48,144 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="mt-5">FizzBuzz Challenge</h1>
-                <p class="lead"></p>
-                <ul class="list-unstyled">
-                    <li>
-                        FizzBuzz is a very simple programming task. Originally it prints the numbers 1 to 100. For multiples of three it prints the word "Fizz" instead of the number
-                        and for multiples of five it prints the word "Buzz". For any number which is both a multiple of three and five, it will print the word "FizzBuzz". I changed it up a bit by
-                        allowing you to input the number you want the program to find multiples of and the range of numbers it will use to search for the multiples.
-                    </li>
-                    <li>
-                        You will see four total FizzBuzz programs below. Each is unique in it's own way. I wrote each program in a different way, mostly for practice but it does show that I am
-                        versatile and can adapt to any challenge. I have also included a snippet of each JavaScript code used for each program. Please enjoy!
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- FizzBuzz A -->
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="mt-5">Find FizzBuzz A</h1>
-                <p>This is the most basic FizzBuzz Challenge. It uses a for loop with if, else if to loop through the given range and to the given multiples.  </p>
-                <p>Enter the requested numbers and let the program Buzzz!</p>
-            </div>
-        </div>
-        <div class="row">
             <div class="col">
-                <br />
-                <div class="row">
-                    <br />
-                    <div class="col card">
-                        <span>Multiples of:</span>
-                        <input type="number" id="userNumA1" placeholder="1st Number" />
-                        <input type="number" id="userNumA2" placeholder="2nd Number" />
-                        <br />
-                        <input type="number" id="lowA" placeholder="Starting Range" />
-                        <input type="number" id="highA" placeholder="Ending  Range." />
-                        <br />
-                        <button class="btn custbtn btn-secondary" onclick="fizzBuzzA()">Buzzzz!</button>
-                        <br />
-                        <span id="returnValueA"></span>
-                        <br />
-                    </div>
-                </div>
+                <h1 class="mt-5 text-center">FizzBuzz Challenge</h1>
             </div>
         </div>
-
-        <!-- FizzBuzz B -->
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="mt-5">Find FizzBuzz B</h1>
-                <p>
-                    Each FizzBuzz challenge is a little more complicated. FizzBuzz B uses the switch statement which checks if the given statement is true, if it is it will execute
-                    the following code, if false it will go to the next case and loop through it.
-                </p>
-                <p>Enter the requested numbers and let the program Buzzz!</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <br />
-                <div class="row">
-                    <br />
-                    <div class="col card">
-                        <span>Multiples of:</span>
-                        <input type="number" id="userNumB1" placeholder="1st Number" />
-                        <input type="number" id="userNumB2" placeholder="2nd Number" />
-                        <br />
-                        <input type="number" id="lowB" placeholder="Starting Range" />
-                        <input type="number" id="highB" placeholder="Ending  Range." />
-                        <br />
-                        <button class="btn custbtn btn-secondary" onclick="fizzBuzzB()">Buzzzz!</button>
-                        <br />
-                        <span id="returnValueB"></span>
-                        <br />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- FizzBuzz C -->
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="mt-5">Find FizzBuzz C</h1>
-                <p>
-                    FizzBuzz C was the most interesting one to figure out. It is considered a one line code. It is accomplished by using a ternary operator. It's the only JavaScript operator that
-                    takes three operands: a condition followed by a question mark (?), then an expression to execute if the condition is true, which is followed by a colon (:), and finally the
-                    expression to execute if the condition is false.
-                </p>
-                <p>Enter the requested numbers and let the program Buzzz!</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <br />
-                <div class="row">
-                    <br />
-                    <div class="col card">
-                        <span>Multiples of:</span>
-                        <input type="number" id="userNumC1" placeholder="1st Number" />
-                        <input type="number" id="userNumC2" placeholder="2nd Number" />
-                        <br />
-                        <input type="number" id="lowC" placeholder="Starting Range" />
-                        <input type="number" id="highC" placeholder="Ending  Range." />
-                        <br />
-                        <button class="btn custbtn btn-secondary" onclick="fizzBuzzC()">Buzzzz!</button>
-                        <br />
-                        <span id="returnValueC"></span>
-                        <br />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- FizzBuzz D -->
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="mt-5">Find FizzBuzz D</h1>
-                <p>
-                    FizzBuzz D uses an array to accomplish the task at hand. An array is an object that is used to store multiple values in a single variable. In this case, that variable is i,
-                    which is the users range input, so it can be as simple as 1 to 100 or more complicated like 1 million for example.
-                </p>
-                <p>Enter the requested numbers and let the program Buzzz!</p>
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <br />
-                <div class="row">
-                    <br />
-                    <div class="col card">
-                        <span>Multiples of:</span>
-                        <input type="number" id="userNumD1" placeholder="1st Number" />
-                        <input type="number" id="userNumD2" placeholder="2nd Number" />
-                        <br />
-                        <input type="number" id="lowD" placeholder="Starting Range" />
-                        <input type="number" id="highD" placeholder="Ending  Range." />
-                        <br />
-                        <button class="btn custbtn btn-secondary" onclick="fizzBuzzD()">Buzzzz!</button>
-                        <br />
-                        <span id="returnValueD"></span>
-                        <br />
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
+    <br />
+    <br />
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-    <!-- My Custom JavaScript File -->
-    <script src="../scripts/main.js"></script>
+<div class="container">
+<div class="row">
+<div class="col">
+<!-- FizzBuzz A -->
+<!-- Collapsible Button for FizzBuzz A -->
+<button type="button" class="collapsible text-center">Else If Loop</button>
+<div class="content">
+<div class="row">
+<div class="col">
+<br />
+<div class="row">
+<br />
+<div class="col card">
+<br />
+<br />
+<input type="number" id="userNumA1" placeholder="Multiple of:" />
+<input type="number" id="userNumA2" placeholder="Multiple of:" />
+<br />
+<input type="number" id="lowA" placeholder="Start buzzing:" />
+<input type="number" id="highA" placeholder="End buzzing:" />
+<br />
+<button class="btn custbtn btn-secondary" onclick="fizzBuzzA()">Buzzzz!</button>
+<br />
+<span id="returnValueA"></span>
+<br />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col">
+<!-- FizzBuzz B -->
+<!-- Collapsible Button for FizzBuzz B -->
+<button type="button" class="collapsible text-center">Switch Statements</button>
+<div class="content">
+<div class="row">
+<div class="col">
+<br />
+<div class="row">
+<br />
+<div class="col card">
+<br />
+<br />
+<input type="number" id="userNumB1" placeholder="Multiple of:" />
+<input type="number" id="userNumB2" placeholder="Multiple of:" />
+<br />
+<input type="number" id="lowB" placeholder="Start buzzing:" />
+<input type="number" id="highB" placeholder="End buzzing:" />
+<br />
+<button class="btn custbtn btn-secondary" onclick="fizzBuzzB()">Buzzzz!</button>
+<br />
+<span id="returnValueB"></span>
+<br />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col">
+<!-- FizzBuzz C -->
+<!-- Collapsible Button for FizzBuzz C -->
+<button type="button" class="collapsible text-center">Ternary Operators</button>
+<div class="content">
+<div class="row">
+<div class="col">
+<br />
+<div class="row">
+<br />
+<div class="col card">
+<br />
+<br />
+<input type="number" id="userNumC1" placeholder="Multiple of:" />
+<input type="number" id="userNumC2" placeholder="Multiple of:" />
+<br />
+<input type="number" id="lowC" placeholder="Start buzzing:" />
+<input type="number" id="highC" placeholder="End buzzing:" />
+<br />
+<button class="btn custbtn btn-secondary" onclick="fizzBuzzC()">Buzzzz!</button>
+<br />
+<span id="returnValueC"></span>
+<br />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col">
+<!-- FizzBuzz D -->
+<!-- Collapsible Button for FizzBuzz D -->
+<button type="button" class="collapsible text-center">Arrays</button>
+<div class="content">
+<div class="row">
+<div class="col">
+<br />
+<div class="row">
+<br />
+<div class="col card">
+<br />
+<br />
+<input type="number" id="userNumD1" placeholder="Multiple of:" />
+<input type="number" id="userNumD2" placeholder="Multiple of:" />
+<br />
+<input type="number" id="lowD" placeholder="Start buzzing:" />
+<input type="number" id="highD" placeholder="End buzzing:" />
+<br />
+<button class="btn custbtn btn-secondary" onclick="fizzBuzzD()">Buzzzz!</button>
+<br />
+<span id="returnValueD"></span>
+<br />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <!-- My Custom JavaScript File -->
+        <script src="../scripts/main.js"></script>
+        <script src="scripts/prism.js"></script>
 
 </body>
 
