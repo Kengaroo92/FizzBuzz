@@ -28,6 +28,7 @@ function fizzBuzzA() {
         else { returnValueA += i + " " }
     }
 
+    console.log(returnValueA);
     document.getElementById("returnValueA").innerHTML = returnValueA;
 
 }
@@ -82,6 +83,7 @@ function fizzBuzzB(userNumB1, userNumB2) {
             }
         }
 
+        console.log(returnValueB);
         document.getElementById("returnValueB").innerHTML = returnValueB;
 
     }
@@ -113,6 +115,7 @@ function fizzBuzzC() {
         returnValueC += ((i % inputNumC1 == 0 ? 'Fizz' : '') + (i % inputNumC2 == 0 ? 'Buzz' : '') || i) + ' ';
     }
 
+    console.log(returnValueC);
     document.getElementById("returnValueC").innerHTML = returnValueC;
 }
 
@@ -138,6 +141,7 @@ function fizzBuzzD() {
 
     //the .join('') is required in this situation or your code will show a bunch of commas which aren't pretty.
     //I also used <br> to break the numbers apart and make it easier to look at.
+    console.log(returnValueD);
     document.getElementById("returnValueD").innerHTML = returnValueD;
 }
 
